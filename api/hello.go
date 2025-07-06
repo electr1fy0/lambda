@@ -7,7 +7,7 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	msg := runtime.Version() + "says hi from serverless"
+	msg := runtime.Version() + " says hi from serverless"
 	component := views.Page("hello everyone!", msg)
 
 	w.Header().Set("Content-Type", "text/html")
