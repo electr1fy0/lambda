@@ -10,7 +10,6 @@ A personal lab for:
 - Quick prototypes
 - Playing with weird stacks
 
-Basically a digital sketchbook.
 
 ## Structure
 None. It’s chaotic by design.
