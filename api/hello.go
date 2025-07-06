@@ -1,11 +1,12 @@
 package handler
 
 import (
-	"fmt"
+	"lambda/views"
 	"net/http"
-	"runtime"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Go version: %s\n", runtime.Version())
+	component := views.Page("Hello from Templ", "This is rendered")
+	w.Header().Set("Content-Type", "text/html")
+	component.Render(r.Context(), w)
 }
